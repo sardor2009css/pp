@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+:root {
+    --radius: 8px;
+    --gap: 24px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif; 
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  
+
+    background:
+      radial-gradient(50% 50% at 70% 30%, rgba(255, 0, 180, 0.35) 0%, transparent 60%),
+      radial-gradient(60% 60% at 20% 70%, rgba(104, 74, 255, 0.35) 0%, transparent 65%),
+      #e7e7ff;
+    background-attachment: fixed;
+  }
+  
+  .wrapper {
+    width: 100%;
+  }
+  
+
+  .form-card {
+    max-width: 960px;
+    margin-inline: auto;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  
+    background: rgba(255, 255, 255, 0.15);       
+    border: 1px solid rgba(58, 96, 255, 0.5);       
+    border-radius: var(--radius);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);        
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  .form-card h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  
+  .two-cols {
+    display: flex;
+    flex-wrap: wrap;    
+    gap: var(--gap);
+  }
+  
+  .two-cols input {
+    flex: 1 1 280px;      
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #d5d5d5;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #6c4cff;
+    box-shadow: 0 0 0 3px rgba(108, 76, 255, 0.25);
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  button {
+    align-self: center;
+    padding: 14px 48px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+
+  
+    background-image: linear-gradient(90deg, #a12efd 0%, #7942ff 50%, #3c78ff 100%);
+    background-size: 200% auto;       
+    transition: background-position 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 600px) {
+    .form-card {
+      padding: 32px 24px;
+    }
+  }
+  
